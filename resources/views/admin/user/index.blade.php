@@ -39,17 +39,18 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->created_at }}</td>
                     <td>
-                        <a href="{{ route('usuario.edit',$user->id)}}" class="m-2 text-secondary size-5"><i class="nav-icon bi bi-pencil-square"></i></a>
+                        <a href="{{ route('usuario.edit',$user->id)}}" class="m-2 text-secondary size-5"><i
+                                class="nav-icon bi bi-pencil-square"></i></a>
                         <a href="{{ route('usuario.show',$user->id)}}"><i class="nav-icon bi bi-eye"></i></a>
                         <a href="#" class="text-danger"><i class="nav-icon bi bi-trash"></i></a>
                     </td>
                 </tr>
                 @empty
-                    <p class="text-danger m-2">Sem usuários cadastrados.</p>
+                <p class="text-danger m-2">Sem usuários cadastrados.</p>
                 @endforelse
             </tbody>
         </table>
-    </div> <!-- /.card-body -->
+    </div> 
 </div>
 
 @endsection
