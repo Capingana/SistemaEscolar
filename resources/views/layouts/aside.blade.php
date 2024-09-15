@@ -16,7 +16,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item"> <a href="./index.html" class="nav-link"> <i class="bi bi-people-fill"></i>
+                        <li class="nav-item"> <a href="{{ route('usuario.index') }}" class="nav-link"> <i class="bi bi-people-fill"></i>
                                 <p>Usuários</p>
                             </a> </li>
                         <li class="nav-item"> <a href="./index2.html" class="nav-link active"> <i

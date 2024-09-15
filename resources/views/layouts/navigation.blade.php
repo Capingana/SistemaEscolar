@@ -3,7 +3,7 @@
         <ul class="navbar-nav">
             <li class="nav-item"> <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"> <i
                         class="bi bi-list"></i> </a> </li>
-            <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Inicio</a> </li>
+            <li class="nav-item d-none d-md-block"> <a href="{{ route('dashboard') }}" class="nav-link">Inicio</a> </li>
             <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Sobre</a> </li>
         </ul>
         <ul class="navbar-nav ms-auto">
@@ -11,7 +11,7 @@
                     data-bs-toggle="dropdown">
                     <span class="d-none d-md-inline">{{ Auth::user()->email }}</span> </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
-                    <li class="user-header text-bg-primary">
+                    <li class="user-header text-bg-secondary">
                         <p>
                             {{ Auth::user()->name }} - Administrador
                             <small>Professor desde - {{ Auth::user()->created_at }}</small>
