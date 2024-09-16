@@ -8,7 +8,7 @@
                         class="bi bi-people"></i> </span>
                 <div class="info-box-content"> <span class="info-box-text">Usuários</span> <span
                         class="info-box-number">
-                        9000 </span> </div>
+                        {{ count($users) }} </span> </div>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">

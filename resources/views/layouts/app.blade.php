@@ -1,43 +1,45 @@
 <!DOCTYPE html>
-<lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@include('partials.head')  
-<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
-    <div class="app-wrapper">
-        @include('layouts.navigation')
-        @include('layouts.aside')
-        <main class="app-main">
-            <div class="app-content-header">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="mb-0">{{$page}}</h3>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-end">
-                                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Início</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    {{ $other_page }}
-                                </li>
-                            </ol>
+<lang="{{ str_replace('_', '-' , app()->getLocale()) }}">
+    @include('partials.head')
+
+    <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+        <div class="app-wrapper">
+            @include('layouts.navigation')
+            @include('layouts.aside')
+            <main class="app-main">
+                <div class="app-content-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="mb-0">{{$page}}</h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-end">
+                                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Início</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        {{ $other_page }}
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="app-content">
-                @yield('content')
-            </div>
-        </main>
-        @include('layouts.footer')
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/browser/overlayscrollbars.browser.es6.min.js"
-        integrity="sha256-H2VM7BKda+v2Z4+DRy69uknwxjyDRhszjXFhsL4gD3w=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/adminlte.js') }}"></script>
-    <script>
-        const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+                <div class="app-content">
+                    @include('partials.message-success-errors')
+                    @yield('content')
+                </div>
+            </main>
+            @include('layouts.footer')
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/browser/overlayscrollbars.browser.es6.min.js"
+            integrity="sha256-H2VM7BKda+v2Z4+DRy69uknwxjyDRhszjXFhsL4gD3w=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script>
+        <script src="{{ asset('assets/js/adminlte.js') }}"></script>
+        <script>
+            const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
         const Default = {
             scrollbarTheme: "os-theme-light",
             scrollbarAutoHide: "leave",
@@ -58,14 +60,14 @@
                 });
             }
         });
-    </script>
-    <!--end::OverlayScrollbars Configure-->
-    <!-- OPTIONAL SCRIPTS -->
-    <!-- apexcharts -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
-        integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
-    <script>
-        const sales_chart_options = {
+        </script>
+        <!--end::OverlayScrollbars Configure-->
+        <!-- OPTIONAL SCRIPTS -->
+        <!-- apexcharts -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
+            integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
+        <script>
+            const sales_chart_options = {
             series: [{
                 name: "Digital Goods",
                 data: [28, 48, 40, 19, 86, 27, 90],
@@ -200,8 +202,9 @@
                 "#0d6efd", "#20c997", "#ffc107", "#d63384", "#6f42c1", "#adb5bd",
             ],
         };
-    </script> <!--end::Script-->
-</body><!--end::Body-->
+        </script>
+        <!--end::Script-->
+    </body>
+    <!--end::Body-->
 
-</html>
-
+    </html>
