@@ -82,6 +82,13 @@
                     <span class="info-box-number">10</span> </div>
             </div>
         </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box"> <span class="info-box-icon text-bg-info shadow-sm">
+                    <i class="bi bi-list"></i> </span>
+                <div class="info-box-content"> <span class="info-box-text">Classes</span>
+                    <span class="info-box-number">{{ count($classes) }}</span> </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
