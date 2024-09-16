@@ -54,12 +54,12 @@
                 <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-clipboard-fill"></i>
                         <p>
                             Classes
-                            <span class="nav-badge badge text-bg-danger me-3">7</span> <i
+                            <span class="nav-badge badge text-bg-danger me-3"></span> <i
                                 class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item"> <a href="./layout/unfixed-sidebar.html" class="nav-link"> <i
+                        <li class="nav-item"> <a href="{{ route('classe.index') }}" class="nav-link"> <i
                                     class="nav-icon bi bi-list"></i>
                                 <p>Todas as classes</p>
                             </a> </li>
@@ -102,7 +102,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item"> <a href="./tables/simple.html" class="nav-link"> <i
+                        <li class="nav-item"> <a href="#" class="nav-link"> <i
                                     class="nav-icon bi bi-list"></i>
                                 <p>Todas as disciplinas</p>
                             </a> </li>
