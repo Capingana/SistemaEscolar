@@ -16,7 +16,7 @@ class ClasseController extends Controller
         //
         $page = "Classes";
         $other_page = "Lista de classes";
-        $classes = Classe::orderBy('name', 'asc')->SimplePaginate();
+        $classes = Classe::with("turmas")->get();
         return view('admin.classe.index', compact('page', 'other_page', 'classes'));
     }
 
@@ -49,7 +49,7 @@ class ClasseController extends Controller
         //
         if ($classe = Classe::find($id)) {
             $page = "Classes";
-            $other_page = "Dados da classe-" . $id;
+            $other_page = "Dados da classe";
             return view('admin.classe.show', compact('page', 'other_page', 'classe'));
         } else {
             return redirect()->back()->with("erro", "Disciplina não encontrada.");

@@ -29,14 +29,14 @@
         <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box"> <span class="info-box-icon text-bg-warning shadow-sm">
                     <i class="nav-icon bi bi-pencil-square"></i></span>
-                <div class="info-box-content"> <span class="info-box-text">Turmas</span> <span
-                        class="info-box-number">20</span> </div>
+                <div class="info-box-content"> <span class="info-box-text">Turma</span> <span
+                        class="info-box-number">{{ count($turmas) }}</span> </div>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box"> <span class="info-box-icon text-bg-secondary shadow-sm">
                     <i class="nav-icon bi bi-pencil-square"></i> </span>
-                <div class="info-box-content"> <span class="info-box-text">Disciplinas</span> <span
+                <div class="info-box-content"> <span class="info-box-text">Disciplina</span> <span
                         class="info-box-number">16</span> </div>
             </div>
         </div>

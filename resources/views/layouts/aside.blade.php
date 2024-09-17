@@ -72,7 +72,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item"> <a href="./UI/general.html" class="nav-link"> <i
+                        <li class="nav-item"> <a href="{{ route('turma.index') }}" class="nav-link"> <i
                                     class="nav-icon bi bi-list"></i>
                                 <p>Todas turmas</p>
                             </a> </li>

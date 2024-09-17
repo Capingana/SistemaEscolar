@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ClasseController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TurmaController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,5 +24,7 @@ Route::middleware('auth')->group(function () {
 Route::resource('/usuario', UserController::class);
 // ==================================
 Route::resource("/classe",ClasseController::class);
+// ==================================
+Route::resource("/turma",TurmaController::class);
 
 require __DIR__ . '/auth.php';

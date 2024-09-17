@@ -3,7 +3,7 @@
 <div class="card mb-4">
     <div class="card-header">
         <h3 class="card-title">
-            <a href="{{ route('classe.create') }}" class="btn btn-primary">Nova classe <i class="bi bi-plus"></i></a>
+            <a href="{{ route('turma.create') }}" class="btn btn-primary">Nova turma <i class="bi bi-plus"></i></a>
         </h3>
         <div class="card-tools">
             <form action="#" method="post">
@@ -17,36 +17,31 @@
                 </div>
             </form>
         </div>
-    </div> 
+    </div>
     <div class="card-body p-0">
 
         <table class="table">
             <thead>
                 <tr>
-                    <th>Nome da classe</th>
-                    <th>Turmas da classe</th>
+                    <th>Nome da turma</th>
+                    <th>Classe</th>
                     <th>
                     </th>
                 </tr>
             </thead>
             <tbody>
-                @forelse ($classes as $classe)
+                @forelse ($turmas as $turma)
                 <tr>
-                    
-                    <td>{{ $classe->name }}</td>
-                    <td class="bg-secondary text-light">
-                        @foreach ($classe->turmas as $turma)
-                            <small>{{ $turma->nome }}</small><br>
-                        @endforeach
-                    </td>
+                    <td>{{ $turma->nome }}</td>
+                    <td class="bg-secondary text-light">{{ $turma->classe->name }}</td>
                     <td>
-                        <a href="{{ route('classe.edit',$classe->id)}}" class="m-2 text-secondary size-5"><i
+                        <a href="{{ route('turma.edit',$turma->id)}}" class="m-2 text-secondary size-5"><i
                                 class="nav-icon bi bi-pencil-square"></i></a>
-                        <a href="{{ route('classe.show',$classe->id)}}"><i class="nav-icon bi bi-eye"></i></a>
+                        <a href="{{ route('turma.show',$turma->id)}}"><i class="nav-icon bi bi-eye"></i></a>
                     </td>
                 </tr>
                 @empty
-                <p class="text-danger m-2">Sem classe cadastrado.</p>
+                <p class="text-danger m-2">Sem turma cadastrado.</p>
                 @endforelse
             </tbody>
         </table>
