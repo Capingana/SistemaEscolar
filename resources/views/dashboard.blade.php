@@ -37,7 +37,7 @@
             <div class="info-box"> <span class="info-box-icon text-bg-secondary shadow-sm">
                     <i class="nav-icon bi bi-pencil-square"></i> </span>
                 <div class="info-box-content"> <span class="info-box-text">Disciplina</span> <span
-                        class="info-box-number">16</span> </div>
+                        class="info-box-number">{{ COUNT($disciplinas) }}</span> </div>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">

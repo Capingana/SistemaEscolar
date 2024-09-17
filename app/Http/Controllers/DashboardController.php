@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Classe;
+use App\Models\Disciplina;
 use App\Models\Turma;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,8 +18,9 @@ class DashboardController extends Controller
         $users=User::all();
         $turmas=Turma::all();
         $classes=Classe::all();
+        $disciplinas=Disciplina::all();
         $page = "Página";
         $other_page = "Página Administrativa";
-        return view('dashboard', compact('page', 'other_page','users','classes','turmas'));
+        return view('dashboard', compact('page', 'other_page','users','classes','turmas','disciplinas'));
     }
 }

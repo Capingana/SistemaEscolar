@@ -12,7 +12,7 @@
             <input type="text" class="form-control" id="validationCustom01" value="{{ $turma->nome ?? old('nome') }}"
                 name="nome" required="">
         </div>
-        <div class="col-md-6"> <label for="description" class="form-label">Descrição da da turma</label>
+        <div class="col-md-6"> <label for="description" class="form-label">Descrição da turma</label>
             <input type="text" class="form-control" id="validationCustom03" required=""
                 value="{{ $turma->description ?? old('description') }}" name="description">
         </div>

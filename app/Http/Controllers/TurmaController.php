@@ -72,6 +72,8 @@ class TurmaController extends Controller
             $other_page = "Editar dados da turma";
             $classes = Classe::all();
             return view('admin.turma.edit', compact('page', 'other_page', 'classes', 'turma'));
+        }else{
+            return redirect()->back()->with("erro", "Turma não encontrada.");
         }
     }
 

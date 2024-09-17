@@ -102,7 +102,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item"> <a href="#" class="nav-link"> <i
+                        <li class="nav-item"> <a href="{{ route('disciplina.index') }}" class="nav-link"> <i
                                     class="nav-icon bi bi-list"></i>
                                 <p>Todas as disciplinas</p>
                             </a> </li>

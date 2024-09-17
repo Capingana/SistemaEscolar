@@ -21,9 +21,10 @@ class StoreUpdateTurmaRequest extends FormRequest
      */
     public function rules(): array
     {
+        $id = $this->segment(2);
         return [
             //
-            'nome' => ['required', 'min:3', 'max:50', 'unique:turmas,nome'],
+            'nome' => ['required', 'min:3', 'max:50', "unique:turmas,nome,{$id},id"],
             'description' => ['required', 'min:3', 'max:255', 'unique:turmas,nome'],
             'classe_id' => ['required']
         ];

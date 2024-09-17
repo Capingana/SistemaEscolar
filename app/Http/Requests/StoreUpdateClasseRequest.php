@@ -21,15 +21,17 @@ class StoreUpdateClasseRequest extends FormRequest
      */
     public function rules(): array
     {
+        $id = $this->segment(2);
         return [
             //
-            'name' => ['required','min:3','max:50']
+            'name' => ['required','min:3','max:50',"unique:classes,name,{$id},id"]
         ];
     }
     public function messages()
     {
         return [
             "name.required" => "Informe o nome da classe",
+            "name.unique" => "Já existe uma classe registrada com este nome.",
             "name.min" => "Nome da classe muito curto",
             "name.max" => "Nome da classe muito longo",
         ];

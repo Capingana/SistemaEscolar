@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\DisciplinaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TurmaController;
 use App\Http\Controllers\UserController;
@@ -26,5 +27,7 @@ Route::resource('/usuario', UserController::class);
 Route::resource("/classe",ClasseController::class);
 // ==================================
 Route::resource("/turma",TurmaController::class);
+//==================================
+Route::resource("/disciplina",DisciplinaController::class);
 
 require __DIR__ . '/auth.php';
