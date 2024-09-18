@@ -19,11 +19,11 @@
         </div>
     </div>
     <div class="card-body p-0">
-
-        <table class="table">
-            <thead>
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
                 <tr>
                     <th>Nome da turma</th>
+                    <th>Nome do professor</th>
                     <th>Classe</th>
                     <th>
                     </th>
@@ -33,6 +33,7 @@
                 @forelse ($turmas as $turma)
                 <tr>
                     <td>{{ $turma->nome }}</td>
+                    <td></td>
                     <td class="bg-secondary text-light">{{ $turma->classe->name }}</td>
                     <td>
                         <a href="{{ route('turma.edit',$turma->id)}}" class="m-2 text-secondary size-5"><i

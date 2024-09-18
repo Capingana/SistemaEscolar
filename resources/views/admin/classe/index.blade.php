@@ -19,9 +19,8 @@
         </div>
     </div> 
     <div class="card-body p-0">
-
-        <table class="table">
-            <thead>
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
                 <tr>
                     <th>Nome da classe</th>
                     <th>Turmas da classe</th>

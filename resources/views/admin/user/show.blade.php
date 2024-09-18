@@ -29,10 +29,30 @@
                     </div>                    
                 </div> 
                 <hr>
-                <div>
-                    <h6 class="text-uppercase">Cargo:Professor</h6>
-                    <p>Total de turmas:45</p>
-                </div>
+                <table class="table table-striped table-inverse table-responsive">
+                    <thead class="thead-inverse">
+                        <tr >
+                            <td>Email</td>
+                            <td>Bilhete de identidade</td>
+                            <td>Telefone</td>
+                            <td>Data de nascimento</td>
+                            <td>Sexo</td>
+                            <td>Cargo</td>
+                            <td>Total de turmas vinculadas</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->dado->bi }}</td>
+                            <td>{{ $user->dado->telefone }}</td>
+                            <td>{{ $user->dado->data_nascimento }}</td>
+                            <td>{{ $user->dado->sexo }}</td>
+                            <td>Sem cargo</td>
+                            <td>Sem turmas</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div> 
     </div>

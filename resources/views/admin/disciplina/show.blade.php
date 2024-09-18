@@ -9,6 +9,8 @@
     </div>
     <div class="card">
         <div class="card-body">
+       
+            <p>Nome da disciplina: <strong>{{ $disciplina->name }}</strong></p>
             <h1>{{ $disciplina->name }}</h1>
             <p>Código: <strong>{{ $disciplina->codigo }}</strong></p>
             <p>Tempos Semanal: <strong>{{ $disciplina->carga_horaria_semanal }}</strong></p>

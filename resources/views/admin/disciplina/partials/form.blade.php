@@ -22,9 +22,21 @@
             value="{{ $disciplina->carga_horaria_semanal ?? old('carga_horaria_semanal') }}"
             name="carga_horaria_semanal">
     </div>
-    <div class="col-md-6"> <label for="carga_horaria_mensal" class="form-label">Carga horária mensal</label>
+    <div class="col-md-6">
+        <label for="carga_horaria_mensal" class="form-label">Carga horária mensal</label>
         <input type="number" class="form-control" id="validationCustom03" required=""
             value="{{ $disciplina->carga_horaria_mensal ?? old('carga_horaria_mensal') }}" name="carga_horaria_mensal"
             disabled>
     </div>
+{{-- 
+    <div class="col-m-6">
+        <label for="classe">Vincular a uma ou mais Classes</label>
+        @foreach ($classes as $classe)
+        <div class="form-check form-switch">
+            <label class="form-check-label" for="flexSwitchCheckDefault">{{ mb_strtoupper($classe->name) }}</label>
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value="{{ $classe->id }}" name="classe[]">
+        </div>
+        @endforeach
+        
+    </div> --}}
 </div>

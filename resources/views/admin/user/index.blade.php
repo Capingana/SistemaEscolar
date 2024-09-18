@@ -19,14 +19,14 @@
         </div>
     </div> <!-- /.card-header -->
     <div class="card-body p-0">
-        
-        <table class="table">
-            <thead>
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
                 <tr>
                     <th>#</th>
                     <th>Nome completo</th>
                     <th>E-mail</th>
-                    <th>Criado em</th>
+                    <th>Telefone</th>
+                    <th>Bilhete de identidade</th>
                     <th>
 
                     </th>
@@ -34,11 +34,16 @@
             </thead>
             <tbody>
                 @forelse ($users as $user)
-                <tr>
+                <tr class="text-uppercase">
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->created_at }}</td>
+                    <td>
+                        {{ $user->dado->telefone }}
+                    </td>
+                    <td>
+                        {{ $user->dado->bi }}
+                    </td>
                     <td>
                         <a href="{{ route('usuario.edit',$user->id)}}" class="m-2 text-secondary size-5"><i
                                 class="nav-icon bi bi-pencil-square"></i></a>

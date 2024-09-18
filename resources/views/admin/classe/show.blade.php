@@ -28,6 +28,26 @@
                     @endforelse
                 </tbody>
             </table>
+            <p>
+                <h2>Disciplinas vinculadas</h2>
+                <table class="table table-dark">
+                    <thead>
+                        <tr class="text-center">
+                            <td>Disciplinas</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                             
+                                @foreach ($classe->disciplinas as $disciplina)
+                                  <p>  {{ $disciplina->name }}</p>
+                                @endforeach
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
             <hr>
             <form action="{{ route('classe.destroy',$classe->id) }}" method="post">
                 @csrf

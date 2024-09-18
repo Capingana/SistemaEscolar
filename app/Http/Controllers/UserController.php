@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use App\Models\Dado;
 use App\Models\User;
+use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB as FacadesDB;
 
 class UserController extends Controller
 {
@@ -39,8 +42,10 @@ class UserController extends Controller
     public function store(StoreUserRequest $request)
     {
         //
-
-        User::create($request->validated());
+        FacadesDB::beginTransaction();
+        $user = User::create($request->validated());
+        $user->dado()->create($request->all());
+        FacadesDB::commit();
         return redirect()->route('usuario.index')->with('sucesso', 'Usuário criado com sucesso.');
     }
 
@@ -86,7 +91,7 @@ class UserController extends Controller
             return redirect()->back()->with('erro', 'Usuário não encontrado.');
         } else {
             //verificando se informou a senha
-            $dados = $request->only(['name','email']);
+            $dados = $request->only(['name', 'email']);
             if ($request->password) {
                 $dados['password'] = bcrypt($request->password);
             }

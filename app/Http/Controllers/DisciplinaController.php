@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUpdateDisciplinaRequest;
+use App\Models\Classe;
 use App\Models\Disciplina;
 use Illuminate\Http\Request;
 
@@ -28,7 +29,8 @@ class DisciplinaController extends Controller
         //
         $page = "Disciplinas";
         $other_page = "Nova disciplina";
-        return view('admin.disciplina.create', compact('page', 'other_page'));
+        $classes=Classe::all();
+        return view('admin.disciplina.create', compact('page', 'other_page','classes'));
     }
 
     /**
@@ -42,7 +44,6 @@ class DisciplinaController extends Controller
         $disciplina->codigo = $request->codigo;
         $disciplina->carga_horaria_semanal = $request->carga_horaria_semanal;
         $disciplina->carga_horaria_mensal = $request->carga_horaria_semanal * 4;
-        $disciplina->save();
         return redirect()->route("disciplina.index")->with("sucesso", "Disciplina criada com sucesso");
     }
 
